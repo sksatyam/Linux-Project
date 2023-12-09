@@ -1,0 +1,59 @@
+Command: 
+1. who: The 'who' command in linux prints information about users who are currently logged in to the system. If no options or flags are passed along with the who command, by default it prints the login name of the user, terminal line, login time, and remote host name.
+
+	INPUT: 
+	$ who
+	
+	OUTPUT:
+	csgs     seat0        2023-12-10 01:29 (login screen)
+ 	csgs     tty2         2023-12-10 01:29 (tty2)
+
+
+2. whoami: The 'whoami' command in linux prints the name of the user associated with the current effective user id. In other words this command allows Linux users to see the currently logged-in user. The command whoami is equivalent to the command 'id -un'
+
+	INPUT: 
+	$ whoami
+	
+	OUTPUT: 
+	csgs
+
+
+3. pwd: The 'pwd' command in linux prints the name of the current working directory. By default if this command is ran without specifying any option or flag the -P flag is assumed which avoids all symlinks. 
+
+	INPUT:
+	$ pwd
+	
+	OUTPUT:
+	/home/csgs/Desktop
+
+	
+4. date: The 'date' command prints or set the system date and time. It displays the current time in the given format or set the system date. 
+	
+	INPUT: 
+	$ date
+	
+	OUTPUT:
+	Sun Dec 10 02:38:19 AM IST 2023
+
+
+5. whereis: The 'whereis' command helps us locate the binary, source, and manual pages for a command. This command helps us look for or find the path or location of any package or binary. In order to use the whereis command to dinf find a specific package we simply mention the name of that package after the whereis command. 
+
+Syntax: whereis package_name 
+
+	INPUT:
+	$ whereis python
+	
+	OUPUT:
+	python: /usr/bin/python /usr/share/man/man1/python.1.gz
+
+
+6. ls: The 'ls' command prints the list of the directory contents. It lists information about the files of the current directory by default, however we can mention the path of any specific directory after the 'ls' command that specificed directory's content list is fetched by the 'ls' command.
+
+Syntax: ls
+	ls path_of_directory
+	
+	INPUT: 
+
+
+
+	
