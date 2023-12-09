@@ -47,13 +47,28 @@ Syntax: whereis package_name
 	python: /usr/bin/python /usr/share/man/man1/python.1.gz
 
 
-6. ls: The 'ls' command prints the list of the directory contents. It lists information about the files of the current directory by default, however we can mention the path of any specific directory after the 'ls' command that specificed directory's content list is fetched by the 'ls' command.
+6. ls: The 'ls' command prints the list of the directory contents by default which means that it will list down whatever is within a directory, i.e the contents. It lists information about the files and directories (contents) of the current directory by default, however we can mention any specific path after the 'ls' command and that specificed directory's content list is fetched by the 'ls' command. The 'ls' command has the a bunch flags or options that we can use get additional information formatted in a certain way.
 
-Syntax: ls
-	ls path_of_directory
-	
+	Syntax of 'ls' command: 
+		ls
+		ls path_of_directory 
+
+
+	Flags of 'ls' command:
+		ls -a : The -a flag prints all the hidden files in the directrory content that ls is listing. 
+		ls -l: The -l flag makes the ls command print all the content in a list formt.
+		ls -ld: The -d directory lists the directories themselves and not their contents and the -l flag here displays it all in a list format. 
+		ls -ldh: The -h flag over here stands for human readable. If used along with -l flag it prints sizes of files like 1K, 23M, 4G etc.
+
+
+
 	INPUT: 
+	ls
 
+	Output: 
+	Desktop    Downloads     Public     Videos     Documents     Music     Pictures  Templates
 
+	INPUT: 
+	ls -l
 
 	
