@@ -1,0 +1,26 @@
+Red Hat System Administration
+ Course Contents: 
+
+Installation of RHEL 9.* and Linux file systems.
+
+• Access the command line 
+◦ Log in to a Linux system and run simple commands using the shell. 
+Who, whoami, who am i, pwd, date, whereis, ls, mkdir, rmdir, cat, touch, info, man, whatis,cd , rm. 
+
+• Manage files from the command line 
+◦Copy, move, delete, and organize files from the bash shell prompt.
+
+• Create, view, and edit text files .
+◦ Create, view, and edit text files with “vim“ from command output or in an editor. 
+
+• Manage local Linux users and groups .
+◦ Manage local Linux users and groups, and administer local password policies. 
+
+• Control access to files with Linux file system permissions.
+◦ Set Linux file system permissions on files and interpret the security effects of different permission settings. 
+
+• Archive and copy files between systems.
+◦ Archive files and copy them from one system to another. 
+
+• Add disks, partitions, and file systems to a Linux system,
+◦ Manage simple partitions and file systems. 
