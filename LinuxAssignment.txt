@@ -1,6 +1,8 @@
 Command: 
 1. who: The 'who' command in linux prints information about users who are currently logged in to the system. If no options or flags are passed along with the who command, by default it prints the login name of the user, terminal line, login time, and remote host name.
 
+Example:
+
 	INPUT: 
 	$ who
 	
@@ -9,7 +11,10 @@ Command:
  	csgs     tty2         2023-12-10 01:29 (tty2)
 
 
+
 2. whoami: The 'whoami' command in linux prints the name of the user associated with the current effective user id. In other words this command allows Linux users to see the currently logged-in user. The command whoami is equivalent to the command 'id -un'
+
+Example:
 
 	INPUT: 
 	$ whoami
@@ -18,7 +23,10 @@ Command:
 	csgs
 
 
+
 3. pwd: The 'pwd' command in linux prints the name of the current working directory. By default if this command is ran without specifying any option or flag the -P flag is assumed which avoids all symlinks. 
+
+Example:
 
 	INPUT:
 	$ pwd
@@ -26,9 +34,12 @@ Command:
 	OUTPUT:
 	/home/csgs/Desktop
 
-	
+
+
 4. date: The 'date' command prints or set the system date and time. It displays the current time in the given format or set the system date. 
-	
+
+Example:
+
 	INPUT: 
 	$ date
 	
@@ -36,9 +47,12 @@ Command:
 	Sun Dec 10 02:38:19 AM IST 2023
 
 
+
 5. whereis: The 'whereis' command helps us locate the binary, source, and manual pages for a command. This command helps us look for or find the path or location of any package or binary. In order to use the whereis command to dinf find a specific package we simply mention the name of that package after the whereis command. 
 
 Syntax: whereis package_name 
+
+Example:
 
 	INPUT:
 	$ whereis python
@@ -47,28 +61,112 @@ Syntax: whereis package_name
 	python: /usr/bin/python /usr/share/man/man1/python.1.gz
 
 
+
 6. ls: The 'ls' command prints the list of the directory contents by default which means that it will list down whatever is within a directory, i.e the contents. It lists information about the files and directories (contents) of the current directory by default, however we can mention any specific path after the 'ls' command and that specificed directory's content list is fetched by the 'ls' command. The 'ls' command has the a bunch flags or options that we can use get additional information formatted in a certain way.
 
-	Syntax of 'ls' command: 
-		ls
-		ls path_of_directory 
-
-
-	Flags of 'ls' command:
-		ls -a : The -a flag prints all the hidden files in the directrory content that ls is listing. 
-		ls -l: The -l flag makes the ls command print all the content in a list formt.
-		ls -ld: The -d directory lists the directories themselves and not their contents and the -l flag here displays it all in a list format. 
-		ls -ldh: The -h flag over here stands for human readable. If used along with -l flag it prints sizes of files like 1K, 23M, 4G etc.
-
-
-
-	INPUT: 
+Syntax: 
 	ls
+	ls path_of_directory 
 
-	Output: 
+Flags/Options of 'ls' command:
+	ls -a : The -a flag prints all the hidden files in the directrory content that ls is listing. 
+	ls -l: The -l flag makes the ls command print all the content in a list formt.
+	ls -ld: The -d directory lists the directories themselves and not their contents and the -l flag here displays it all in a list format. 
+	ls -ldh: The -h flag over here stands for human readable. If used along with -l flag it prints sizes of files like 1K, 23M, 4G etc.
+
+Example:
+
+	INPUT:
+	$ ls 
+
+	OUTPUT: 
 	Desktop    Downloads     Public     Videos     Documents     Music     Pictures  Templates
 
-	INPUT: 
-	ls -l
 
+	INPUT:
+	$ ls -la
+
+	OUTPUT:
+	total 8
+	drwxr-xr-x.  3 csgs csgs   47 Dec 10 03:26 .
+	drwx------. 16 csgs csgs 4096 Dec 10 03:14 ..
+	-rw-r--r--.  1 csgs csgs   78 Dec  9 15:04 learndnf.txt
+	drwxr-xr-x.  3 csgs csgs   67 Dec 10 03:16 Linux-Project
+
+
+
+7. mkdir: The 'mkdir' command lets us make directories. We can use the mkdir command followed by the name of the directories that we want to create and mkdir will create the directories with the specificed names. We can use the mkdir command to create any nunber of directories in one go, we are required to put spaces between the names of different directories in order to crete more than one directory. The 'mkdir' command by default doesn't display any output on the terminal after a execution, if we want it to display anything we are required to use the -v flag. 
+
+Syntax:
+	mkdir directoryname
+	mkdir directory1 directory2 directory3
+
+Flags of 'mkdir' command:
+	mkdir -v: The -v flag stands for verbose and it prints a message for each directory created. 
+	mkdir -p: The -p flag lets us make parent directories as needed which simply means that it lets us create directories within directories. 
 	
+Examlpe:
+	
+	INPUT:
+	$ mkdir -v csgs
+
+	OUPUT:
+	mkdir: created directory 'csgs'
+
+
+	INPUT:
+	$ mkdir -vp TIU/BCA/1F
+
+	OUTPUT:
+	mkdir: created directory 'TIU'
+	mkdir: created directory 'TIU/BCA'
+	mkdir: created directory 'TIU/BCA/1F'
+
+
+
+8. rmdir: The 'rmdir' command helps us delete empty directories. We can only delete directories that are empty using the rmdir command in linux. By default the rmdir command doesn't output anything in the terminal after a successful execution, we can however use the -v flag to display the output of an execution of the rmdir command. 
+
+Syntax:
+	rmdir directoryname
+
+Flags of 'rmdir' command:
+	rmdir -p: The -p flag helps us delete directories and its ancestors. This however only works if both the directory and its ancestores are empty directories. 
+	rmdir -v: The -v flag stands for verbose and it outputs a message in the terminal for every execution of the rmdir command.  
+
+Example:
+
+	INPUT:
+	$ rmdir -v csgs
+
+	OUTPUT:
+	rmdir: removing directory, 'csgs'
+
+
+
+9. cat: The 'cat' command is used to concatenate files and print the content of the mentioned file on the standard output. However, one of the popular use of the 'cat' command is to make files with it using the '>' redirection operator in linux followed by the name of the file. In simple terms, we can easily create files and view the content of a files using the 'cat' command. 
+
+Syntax:
+	cat>filename.txt : To create a file
+	cat filename.txt : To view contents of a file
+
+Example:
+
+	INPUT:
+	$ cat>csgs.txt
+
+	OUTPUT:
+	While creating a file using the cat command followed by the name of the file that we are creating and the redirection operator, the cat command doesn't output anything in the terminal. 
+
+
+	INPUT:
+	$ cat csgs.txt
+
+	OUTPUT:
+	I am Chandra Sreas Gop
+	A student of BCA at TIU. 
+	I am a Linux Enthusiast	
+	I use Arch btw!
+
+
+
+10. 
