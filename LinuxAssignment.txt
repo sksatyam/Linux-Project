@@ -1,11 +1,11 @@
-• Installation of RHEL9 and Linux File System. 
+﻿• Installation of RHEL9 and Linux File System. 
 
 ◦ Introduction to RHEL 9:
-	Red Hat Enterprise Linux 9, commonly known as RHEL 9, is a highly utilizied commercial operating system employed across various industries worldwide. The RHEL series, developed by Red Hat Inc., a subsidary of IMB, is renowned for its security, resilience, and suitability for business use. Officially launched on May 17, 2022, RHEL 9 is equipped with the Linux Kernel 5.14.0 and features GNOME 40 as it desktop environment, with dnf serving as its default package manager. 
+	Red Hat Enterprise Linux 9, commonly known as RHEL 9, is a highly utilized commercial operating system employed across various industries worldwide. The RHEL series, developed by Red Hat Inc., a subsidiary of IMB, is renowned for its security, resilience, and suitability for business use. Officially launched on May 17, 2022, RHEL 9 is equipped with the Linux Kernel 5.14.0 and features GNOME 40 as it desktop environment, with ‘dnf’ serving as its default package manager. 
 
 
 ◦ Hardware Requirements:
-	The system specification required for a successful installation of Red Hat Enterprise Linux 9 depends on the kind of installation one is looking forward to performing. Creating a RHEL 9 GUI less server installaion will take significanlty less resources, whereas doing a workstation installation will take much more resources. However, here's a general hardware requirement reference to get RHEL 9 up and running:
+	The system specification required for a successful installation of Red Hat Enterprise Linux 9 depends on the kind of installation one is looking forward to performing. Creating a RHEL 9 GUI less server installation will take significantly less resources, whereas doing a workstation installation will take much more resources. However, here's a general hardware requirement reference to get RHEL 9 up and running:
 
 	Processor: 64 Bit Processor (Intel64, AMD64 or ARM64)
 		Minimum: 1GHz Single or Multi CPU
@@ -20,7 +20,7 @@
 		Recommended: 20 GB or more Free Space
 
 	Network: 
-		Recommended: A wired Ethernet Network Adaprter 
+		Recommended: A wired Ethernet Network Adapter 
 
 	Graphics Display Resolution: 
 		Minimum: 800 x 600
@@ -31,12 +31,12 @@
 
 ◦ Steps to Install RHEL 9:
 	1. Acquire the RHEL 9 installation media, either by downloading the ISO file from the Official Red Hat Website or using physical media. 
-	2. Create a bootable USB or burn the ISP to a DVD. 
+	2. Create a boot-able USB or burn the ISP to a DVD. 
 	3. Boot your the system from the Installation Media. 
 	4. Select the option 'Install Red Hat Enterprise Linux 9.0' from the option menu while booting. 
 	5. Select the preferred language which will be used during OS installation. 
 	6. In this step, initially we get the Installation Summary screen we can configure the language, time zone and keyboard settings. 
-	7. Set up disk partitions, either manually we can opt for standard partitioning or lvm setup or we can set up disk parition using the automatic partitioning option. 
+	7. Set up disk partitions, either manually we can opt for standard partitioning or ‘lvm’ setup or we can set up disk partition using the automatic partitioning option. 
 	8. Customize the software packages to be installed or proceed with the default package selection. 
 	9. Set password to the root account and set up a user account. 
 	10 Confirm the installation settings in the Installation Summary screen and initiate the installation process. 
@@ -44,7 +44,7 @@
 
 
 ◦ Linux File System:
-	Linux support multiple file system types like ext2, ext3, ext4, xfs, btrfs, etc., each with its own characteristics. The Linux File System provides a framework for organizing and managing data efficiently on Linux systems. The choice of file system depends on factors such as performance, its features and use cases of the user. The Linux File System is a hierarchical and tree-structured organization of files and directories used by the Linux Operating System to manage and store data. It begins with the root directory "/" and follow a tree-like structure, with directories containing files and subdirectories. Linux file names are case-sensitive, allowing for alphanumeric and special characters. Various file types, including regular-files, directories and symbolic links, are recognized. Mount points enable access to different storage devices or network resources, and file permissions regulate access.
+	Linux support multiple file system types like ext2, ext3, ext4, xfs, btrfs, etc., each with its own characteristics. The Linux File System provides a framework for organizing and managing data efficiently on Linux systems. The choice of file system depends on factors such as performance, its features and use cases of the user. The Linux File System is a hierarchical and tree-structured organization of files and directories used by the Linux Operating System to manage and store data. It begins with the root directory "/" and follow a tree-like structure, with directories containing files and sub-directories. Linux file names are case-sensitive, allowing for alphanumeric and special characters. Various file types, including regular-files, directories and symbolic links, are recognized. Mount points enable access to different storage devices or network resources, and file permissions regulate access.
 
 
 • Access the command line 
@@ -52,7 +52,7 @@
 Who, whoami, who am i, pwd, date, whereis, ls, mkdir, rmdir, cat, touch, info, man, whatis,cd , rm. 
 
 Commands: 
-1. who: The 'who' command in linux prints information about users who are currently logged in to the system. If no options or flags are passed along with the who command, by default it prints the login name of the user, terminal line, login time, and remote host name.
+1. who: The 'who' command in Linux prints information about users who are currently logged in to the system. If no options or flags are passed along with the who command, by default it prints the login name of the user, terminal line, login time, and remote host name.
 
 Example:
 
@@ -65,7 +65,7 @@ Example:
 
 
 
-2. whoami: The 'whoami' command in linux prints the name of the user associated with the current effective user id. In other words this command allows Linux users to see the currently logged-in user. The command whoami is equivalent to the command 'id -un'
+2. whoami: The 'whoami' command in Linux prints the name of the user associated with the current effective user id. In other words this command allows Linux users to see the currently logged-in user. The command whoami is equivalent to the command 'id -un'
 
 Example:
 
@@ -101,7 +101,7 @@ Example:
 
 
 
-5. whereis: The 'whereis' command helps us locate the binary, source, and manual pages for a command. This command helps us look for or find the path or location of any package or binary. In order to use the whereis command to dinf find a specific package we simply mention the name of that package after the whereis command. 
+5. whereis: The 'whereis' command helps us locate the binary, source, and manual pages for a command. This command helps us look for or find the path or location of any package or binary. In order to use the whereis command to find a specific package we simply mention the name of that package after the whereis command. 
 
 Syntax: whereis package_name 
 
@@ -115,7 +115,7 @@ Example:
 
 
 
-6. ls: The 'ls' command prints the list of the directory contents by default which means that it will list down whatever is within a directory, i.e the contents. It lists information about the files and directories (contents) of the current directory by default, however we can mention any specific path after the 'ls' command and that specificed directory's content list is fetched by the 'ls' command. The 'ls' command has the a bunch flags or options that we can use get additional information formatted in a certain way.
+6. ls: The 'ls' command prints the list of the directory contents by default which means that it will list down whatever is within a directory, i.e the contents. It lists information about the files and directories (contents) of the current directory by default, however we can mention any specific path after the 'ls' command and that specified directory's content list is fetched by the 'ls' command. The 'ls' command has the a bunch flags or options that we can use get additional information formatted in a certain way.
 
 Syntax: 
 	ls
@@ -123,7 +123,7 @@ Syntax:
 
 Flags/Options of 'ls' command:
 	ls -a : The -a flag prints all the hidden files in the directrory content that ls is listing. 
-	ls -l: The -l flag makes the ls command print all the content in a list formt.
+	ls -l: The -l flag makes the ls command print all the content in a list format.
 	ls -ld: The -d directory lists the directories themselves and not their contents and the -l flag here displays it all in a list format. 
 	ls -ldh: The -h flag over here stands for human readable. If used along with -l flag it prints sizes of files like 1K, 23M, 4G etc.
 
@@ -148,7 +148,7 @@ Example:
 
 
 
-7. mkdir: The 'mkdir' command lets us make directories. We can use the mkdir command followed by the name of the directories that we want to create and mkdir will create the directories with the specificed names. We can use the mkdir command to create any nunber of directories in one go, we are required to put spaces between the names of different directories in order to crete more than one directory. The 'mkdir' command by default doesn't display any output on the terminal after a execution, if we want it to display anything we are required to use the -v flag. 
+7. mkdir: The 'mkdir' command lets us make directories. We can use the mkdir command followed by the name of the directories that we want to create and mkdir will create the directories with the specified names. We can use the mkdir command to create any number of directories in one go, we are required to put spaces between the names of different directories in order to create more than one directory. The 'mkdir' command by default doesn't display any output on the terminal after a execution, if we want it to display anything we are required to use the -v flag. 
 
 Syntax:
 	mkdir directoryname
@@ -158,7 +158,7 @@ Flags of 'mkdir' command:
 	mkdir -v: The -v flag stands for verbose and it prints a message for each directory created. 
 	mkdir -p: The -p flag lets us make parent directories as needed which simply means that it lets us create directories within directories. 
 	
-Examlpe:
+Example:
 	
 	INPUT:
 	$ mkdir -v csgs
@@ -196,7 +196,7 @@ Example:
 
 
 
-9. cat: The 'cat' command is used to concatenate files and print the content of the mentioned file on the standard output. However, one of the popular use of the 'cat' command is to make files with it using the '>' redirection operator in linux followed by the name of the file. In simple terms, we can easily create files and view the content of a files using the 'cat' command. 
+9. cat: The 'cat' command is used to concatenate files and print the content of the mentioned file on the standard output. However, one of the popular use of the 'cat' command is to make files with it using the '>' redirection operator in Linux followed by the name of the file. In simple terms, we can easily create files and view the content of a files using the 'cat' command. 
 
 Syntax:
 	cat>filename.txt : To create a file
@@ -222,7 +222,7 @@ Example:
 
 
 
-10. touch: The 'touch' command is used the change the accesd and modify the timestamps of the specified files. However, if any file of the mentioned name is not present touch command creats an empty file with the mentioned name and by default 'touch' command sets file timestamps to the current time. As a result one of the popular use of the 'touch' command is to create files with it, in order to do so we simply write the filename and the required extension after the touch command.  
+10. touch: The 'touch' command is used the change the access and modify the time-stamps of the specified files. However, if any file of the mentioned name is not present touch command creates an empty file with the mentioned name and by default 'touch' command sets file times-tamps to the current time. As a result one of the popular use of the 'touch' command is to create files with it, in order to do so we simply write the file name and the required extension after the touch command.  
 
 Syntax:
 	touch filename.txt
@@ -307,7 +307,7 @@ Example:
 
 
 
-14. cd: The 'cd' command stands for change directory and it simply stands for what it is, cd helps us change directory. However, simply tyyping cd without mentioning any paths afterwards takes us to the home directory of the current user. 
+14. cd: The 'cd' command stands for change directory and it simply stands for what it is, cd helps us change directory. However, simply typing cd without mentioning any paths afterwards takes us to the home directory of the current user. 
 
 Syntax:
 	cd : takes to the home directory of the current user.
@@ -350,5 +350,6 @@ Examlpe:
 	removed 'csgs.txt'
 
 	The 'rm' command doesn't output anything by default, however we cam use the -v flag to get output on execution of 'rm' command. 
+
 
 
