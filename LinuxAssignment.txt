@@ -1,4 +1,4 @@
-﻿• Installation of RHEL9 and Linux File System. 
+﻿    •  Installation of RHEL9 and Linux File System. 
 
 ◦ Introduction to RHEL 9:
 	Red Hat Enterprise Linux 9, commonly known as RHEL 9, is a highly utilized commercial operating system employed across various industries worldwide. The RHEL series, developed by Red Hat Inc., a subsidiary of IMB, is renowned for its security, resilience, and suitability for business use. Officially launched on May 17, 2022, RHEL 9 is equipped with the Linux Kernel 5.14.0 and features GNOME 40 as it desktop environment, with ‘dnf’ serving as its default package manager. 
@@ -47,7 +47,7 @@
 	Linux support multiple file system types like ext2, ext3, ext4, xfs, btrfs, etc., each with its own characteristics. The Linux File System provides a framework for organizing and managing data efficiently on Linux systems. The choice of file system depends on factors such as performance, its features and use cases of the user. The Linux File System is a hierarchical and tree-structured organization of files and directories used by the Linux Operating System to manage and store data. It begins with the root directory "/" and follow a tree-like structure, with directories containing files and sub-directories. Linux file names are case-sensitive, allowing for alphanumeric and special characters. Various file types, including regular-files, directories and symbolic links, are recognized. Mount points enable access to different storage devices or network resources, and file permissions regulate access.
 
 
-• Access the command line 
+    • Access the command line 
 ◦ Log in to a Linux system and run simple commands using the shell. 
 Who, whoami, who am i, pwd, date, whereis, ls, mkdir, rmdir, cat, touch, info, man, whatis,cd , rm. 
 
