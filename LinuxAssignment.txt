@@ -30,7 +30,21 @@
 
 
 ◦ Steps to Install RHEL 9:
-	
+	1. Acquire the RHEL 9 installation media, either by downloading the ISO file from the Official Red Hat Website or using physical media. 
+	2. Create a bootable USB or burn the ISP to a DVD. 
+	3. Boot your the system from the Installation Media. 
+	4. Select the option 'Install Red Hat Enterprise Linux 9.0' from the option menu while booting. 
+	5. Select the preferred language which will be used during OS installation. 
+	6. In this step, initially we get the Installation Summary screen we can configure the language, time zone and keyboard settings. 
+	7. Set up disk partitions, either manually we can opt for standard partitioning or lvm setup or we can set up disk parition using the automatic partitioning option. 
+	8. Customize the software packages to be installed or proceed with the default package selection. 
+	9. Set password to the root account and set up a user account. 
+	10 Confirm the installation settings in the Installation Summary screen and initiate the installation process. 
+	11. Upon completion, click on reboot option and log in to the newly install RHEL9 system. 
+
+
+◦ Linux File System:
+	Linux support multiple file system types like ext2, ext3, ext4, xfs, btrfs, etc., each with its own characteristics. The Linux File System provides a framework for organizing and managing data efficiently on Linux systems. The choice of file system depends on factors such as performance, its features and use cases of the user. The Linux File System is a hierarchical and tree-structured organization of files and directories used by the Linux Operating System to manage and store data. It begins with the root directory "/" and follow a tree-like structure, with directories containing files and subdirectories. Linux file names are case-sensitive, allowing for alphanumeric and special characters. Various file types, including regular-files, directories and symbolic links, are recognized. Mount points enable access to different storage devices or network resources, and file permissions regulate access.
 
 
 • Access the command line 
