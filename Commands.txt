@@ -1,0 +1,110 @@
+GUI -- GRAPHICAL USER INTERFACE
+TERMINAL: A TERMINAL LETS US ACCESS THE SHELL. IT IS A GATEWAY TO THE SHELL.
+TERMINAL EMULATOR: A SOFTWARE PROGRAM THAT EMULATES THE TERMINAL IN GUI MODE, e.g. gnome-terminal.
+
+
+
+CUI -- CHARACTER USER INTERFACE
+CLI -- COMMAND LINE INTERFACE
+
+VIRTUAL TERMINAL (VT): THERE CAN EXIST 6 VIRTUAL TERMINALS at a time.
+
+HOW TO ACCESS A VIRTUAL TERMINAL?
+Virtual Terminal 1: Ctrl + ALt + F1 --> Login Screen / Login Manager
+Virtual Terminal 2: Ctrl + Alt + F2 --> GUI Session
+Virtual Terminal 3-6: Ctrl + Alt + F3 - F6 --> ALL THE other VIRTUAL TERMINALS
+
+
+How many main types of users are there in Linux?
+1. root user/super user/admin user: The user with all the permissions and previlleges of the system.
+2. normal users: have limited access to the system.
+
+The home directory of a normal user lies with in the /home. Every user creates a subdirectory by it's own name in the /home directory. e.g. /home/swati
+the home directory of the root user is: /root
+
+
+
+What is a prompt?
+A prompt is the text that is always there in the terminal even before you start typing something. A prompt usually ends with a dollar sign or a hash sign.
+If a prompt ends in dollar sign you are a normal user. 
+If a prompt ends in hash sign it shows you are the root user.
+
+Example of a prompt:
+
+[swati@localhost ~]$
+
+We can see that in the default prompt of RHEL9 the 1st thing is the name of the user in this case swati. Followed by the '@' after which we see the name of out machine which is localhost in this case. Aftwareds, we can see the '~' tilde sign, which shows that out current working directory is the home directory of the user swati in this case. If we are in some other directory in place of the tilde sign we are supposed to see the name of the directory we are currently in. Afterwards we can see that we have a dollar sign which showst that we are currently logged in as a normal user and not as the root user. 
+
+ 
+Commands:
+
+1. who: displays which user is logged into which vt and when did they log in. 
+
+2. whoami: displays the name of the current user.
+
+3. pwd: stands for print working directory and it displays the name of the folder you are in currently.
+
+4. cd: if you only write cd without anything mentioned afterwards, it will take you to the home directory of the currnet user. The cd stands for change directory. as the name suggests it helps us to change directories. We will simply have the mention the Path of the directory we want to go to. We can navigate back to previous directories using cd ..
+
+5. ls: The ls command lists all the contents of the directory you are present in. 
+Flags of ls: -l : displays content in list format
+             -a : shows hidden files
+
+6. clear: It clears the screen.
+
+7. cat: It helps us get two jobs done:
+    a. To create a file: cat>filename.txt 
+		Executing a command gives us a place to write the content. We can exit the writing area by pressing one of the two mentioned shortcut
+		Ctrl + c
+        Ctrl + z.
+		In order to create hidden files we simply have to prefix the name of the file with a '.'.
+
+    b. To view a file: cat filename.txt
+
+8. mkdir: The mkdir commands helps us create folders. We simply mention the name of the folder after the mkdir command to create it. 
+We can create multiple folders in one go using one command!
+We can also create hidden holders using mkdir command we simply have to put a . before the name of the folder. e.g mkdir .Secrets
+Flag of mkdir:
+	-p : The p flag stands for parent. It lets us create directory under a directory. 
+
+9. rmdir: Only removes or deletes empty directories	
+
+10. rm: the rm command helps us delete files and folders.
+	To delete files:
+	If we simply use rm and mention the name of a file either hidden or normal we can delete that file. 
+	e.g. rm khushi.txt
+         rm .khushi.txt
+	
+	To delete folders:
+	If we want to delete folders that are not empty we need to use rm command along with -rf flag.
+	e.g. rm -rf Swati
+	     rm -rf .Swati
+
+11. tree: This command helps us see a visual representation of the files and folders of the directory that we are currently in. 
+
+12. cp: The cp command helps us copy a file. After the cp command first we write the name of the file that we want to copy and then we write the name of the file that we want to copy to. 
+Flags of cp:
+	cp -v: The -v flag helps us have a description of the command.
+
+13. mv: The mv command can be used for three purposes.
+	a. We can also use the mv command to unhide a file.
+	b. We can use the mv command to rename a file.
+	c. We can use the mv command to move a file from a position to
+	   another. 
+
+14. man: man stands for manual and the man command followed by the name
+of any other command displays the manual page of the mentioned command.
+
+15. info: info command displays additional information about the 
+mentioned command. 
+
+Note: the '~' tilde symbol represents the home directory.
+Note: Directory/Folder/Repository are all the same
+Note: Flags or Options are additional agrguments that we pass to the
+commands to get more information. 
+Note: Hidden files and folders begin with a '.'
+Note: In permission string a file begins with - and a folder begins with
+      d. 
+Note: In order to create hidden files we simply add a . before the name
+of the file. 
+Note: We exit man pages or info pages by pressing q. 
