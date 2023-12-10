@@ -1,4 +1,43 @@
-Command: 
+• Installation of RHEL9 and Linux File System. 
+
+◦ Introduction to RHEL 9:
+	Red Hat Enterprise Linux 9, commonly known as RHEL 9, is a highly utilizied commercial operating system employed across various industries worldwide. The RHEL series, developed by Red Hat Inc., a subsidary of IMB, is renowned for its security, resilience, and suitability for business use. Officially launched on May 17, 2022, RHEL 9 is equipped with the Linux Kernel 5.14.0 and features GNOME 40 as it desktop environment, with dnf serving as its default package manager. 
+
+
+◦ Hardware Requirements:
+	The system specification required for a successful installation of Red Hat Enterprise Linux 9 depends on the kind of installation one is looking forward to performing. Creating a RHEL 9 GUI less server installaion will take significanlty less resources, whereas doing a workstation installation will take much more resources. However, here's a general hardware requirement reference to get RHEL 9 up and running:
+
+	Processor: 64 Bit Processor (Intel64, AMD64 or ARM64)
+		Minimum: 1GHz Single or Multi CPU
+		Recommended: 2GHz Single or Multi CPU
+	
+	Memory (RAM): 
+		Minimum: 2-3 GB 
+		Recommended: 4 GB
+
+	Disk Space:
+		Minimum: 10 GB of Free Space
+		Recommended: 20 GB or more Free Space
+
+	Network: 
+		Recommended: A wired Ethernet Network Adaprter 
+
+	Graphics Display Resolution: 
+		Minimum: 800 x 600
+		Recommended: 1026 x 768
+
+	Installation Media: USB Stick Boot Media
+
+
+◦ Steps to Install RHEL 9:
+	
+
+
+• Access the command line 
+◦ Log in to a Linux system and run simple commands using the shell. 
+Who, whoami, who am i, pwd, date, whereis, ls, mkdir, rmdir, cat, touch, info, man, whatis,cd , rm. 
+
+Commands: 
 1. who: The 'who' command in linux prints information about users who are currently logged in to the system. If no options or flags are passed along with the who command, by default it prints the login name of the user, terminal line, login time, and remote host name.
 
 Example:
@@ -169,4 +208,133 @@ Example:
 
 
 
-10. 
+10. touch: The 'touch' command is used the change the accesd and modify the timestamps of the specified files. However, if any file of the mentioned name is not present touch command creats an empty file with the mentioned name and by default 'touch' command sets file timestamps to the current time. As a result one of the popular use of the 'touch' command is to create files with it, in order to do so we simply write the filename and the required extension after the touch command.  
+
+Syntax:
+	touch filename.txt
+
+Examples:
+	
+	INPUT:
+	$ touch csgs.txt
+
+	OUTPUT:
+	While creating any file using the touch command it doesn't output anything after execution. 
+
+
+
+11. info: The 'info' command helps us read documentation in the info format of the mentioned command. We simply type the name of the command that we want to know more about followed by the info keyword. We press 'q' to exit or quit the info documentation page of any command. 
+
+Syntax:
+	info command
+
+Example:
+
+	INPUT:
+	$ info mv
+
+	OUTPUT:
+	11.4 ‘mv’: Move (rename) files
+	==============================
+
+	‘mv’ moves or renames files (or directories).  Synopses:
+
+    	 mv [OPTION]... [-T] SOURCE DEST
+    	 mv [OPTION]... SOURCE... DIRECTORY
+    	 mv [OPTION]... -t DIRECTORY SOURCE...
+	.........................................................
+	.........................................................
+	The info command brings the entire documentation of the mentioned command in info format, in this case 'info' will bring the documentation of the 'mv' command.
+
+
+
+12. man: Man stands for manual and the 'man' command provides us an interface to the system reference manuals, and mentioning any command after the 'man' command simply brings the reference manual page of the specified command. We press 'q' to quit the reference manual page of any command retrieved by the man command. 
+
+Syntax:
+	man command
+
+Example:
+
+	INPUT:
+	$ man mv
+
+	OUTPUT:
+	MV(1)                           User Commands                          MV(1)
+
+	NAME
+    	   mv - move (rename) files
+
+	SYNOPSIS
+    	   mv [OPTION]... [-T] SOURCE DEST
+    	   mv [OPTION]... SOURCE... DIRECTORY
+    	   mv [OPTION]... -t DIRECTORY SOURCE...
+
+	DESCRIPTION
+    	   Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
+	...........................................................................
+	..........................................................................
+	
+	The man command brings the entire reference manual page of the mentioned command, in this case 'man' command will bring the documentation of the 'mv' command. 
+
+
+
+13. whatis: The 'whatis' command displays one-line manual page descriptions of the mentioned commands. 
+
+Syntax:
+	whatis command
+
+Example:
+
+	INPUT:
+	$ whatis gcc
+
+	OUTPUT:
+	gcc (1)              - GNU project C and C++ compiler
+
+
+
+14. cd: The 'cd' command stands for change directory and it simply stands for what it is, cd helps us change directory. However, simply tyyping cd without mentioning any paths afterwards takes us to the home directory of the current user. 
+
+Syntax:
+	cd : takes to the home directory of the current user.
+	cd Directory/Directory2 : Helps us navigate to directory2
+
+Example:
+
+	INPUT:
+	$ cd
+
+	OUTPUT:
+	The cd command doesn't output anything after execution, however this command without any path mentioned afterwards will take us to the home of the current directory. 
+
+
+	INPUT:
+	$ cd /home/csgs/Desktop
+
+	OUTPUT:
+	The cd command won't output anything in this case either. However, if we use the 'pwd' command after executing this command we will see that we have navigated to the 'Desktop' directory. 
+
+
+
+15. rm : The 'rm' command helps us remove files or directories. 
+
+Syntax:
+	rm filename.txt
+	rm -rf directoryname
+
+Flags of 'rm' command:
+	rm -f: The -f flag ignore nonexistent files and arguments and never prompts
+	rm -r: The -r flag remove directories and their contents recursively. 
+	rm -v: The -v flag stands for verbose and it explains what is being done.
+
+Examlpe:
+
+	INPUT:
+	rm -v csgs.txt
+
+	OUTPUT:
+	removed 'csgs.txt'
+
+	The 'rm' command doesn't output anything by default, however we cam use the -v flag to get output on execution of 'rm' command. 
+
+
