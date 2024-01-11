@@ -529,12 +529,131 @@ Eample:
 	INPUT:
 	$ vim csgs.txt
 	
-	OUTPUT:
-	Passing any filename followed by the vim command opens the mentioned file in the vim text editor. If the mentioned file isn’t available, vim creates the file, and if the mentioned file is present already vim opens up the file in the text editor and enables us to edit it. In order for us to edit and write to it we need to get into the insert mode by pressing ‘i’ and after we are done with editing the file we can save and exit it by pressing ‘Ecs’ to get back to the command mode and press ‘q!’ if we want to exit without saving and ‘wq’ we we want to save and exit.
+Passing any filename followed by the vim command opens the mentioned file in the vim text editor. If the mentioned file isn’t available, vim creates the file, and if the mentioned file is present already vim opens up the file in the text editor and enables us to edit it. In order for us to edit and write to it we need to get into the insert mode by pressing ‘i’ and after we are done with editing the file we can save and exit it by pressing ‘Ecs’ to get back to the command mode and press ‘q!’ if we want to exit without saving and ‘wq’ we we want to save and exit.
 
 
 
 
 	• Manage local Linux users and groups:
 ◦ Manage local Linux users and groups, and administer local password policies.
+
+sudo: Sudo privilege lets us execute a command as another user. We can either run these commands using an user account that has sudo privileges or we can simply switch to the root account to execute these commands. 
+
+All these user-management commands doesn’t yield any output in the terminal after successful execution. 
+
+1. Manage Local Linux Users
+
+
+I. Create a New User:
+useradd: The “useradd” command helps us create a new user and update default new user information. 
+
+Syntax:
+	useradd username
+
+Example:
+	
+	INPUT:
+	# useradd csgs	
+
+
+II. Delete a user:
+userdel: The “userdel” command helps us delete a user account and related files.
+
+Syntax:
+	userdel username
+
+Example:
+
+	INPUT:
+	# userdel csgs
+
+
+III. Change User Password:
+passwd: The “passwd” command helps us change or update the any user’s passwords and password policies.
+
+Syntax:
+	passwd username 
+
+Example:
+
+	Input:
+	# passwd csgs
+
+
+IV. Add User to a Group:
+usermod: The “usermod” command helps us modify the user account by performing actions like adding or removing a user to a group etc. 
+
+Syntax:
+	usermod -aG groupname username
+
+Example:
+	
+	INPUT:
+	# usermod -aG wheel csgs
+
+
+V. Remove user from a Group:
+There’s a couple of ways to remove a user from a group. One being removing it from the group file of the /etc directory.  
+
+Syntax:
+	nano /etc/group
+	
+Example:
+	
+	INPUT:
+	# nano /etc/group
+	
+Afterwards we are required to find the name of the group that we want to remove the user from and then we can delete the name of the user from the group and save the file.
+
+
+VI. Change User’s Primary Groups:
+Syntax:
+	usermod -g groupname username
+
+Example:
+	
+	INPUT:
+	# usermod -g wheel csgs
+
+
+
+2. Manage Local Linux Groups:
+
+
+I. Create a New Group:
+groupadd: The “groupadd” command helps us create a new group. 
+
+Syntax:
+	groupadd groupname
+
+Example:
+
+	INPUT:
+	# groupadd bca
+
+
+II. Delete a group:
+groupdel: The “groupdel” command helps us delete a group. 
+
+Syntax:
+	groupdel
+
+Example:
+	
+	INPUT:
+	# groupdel bca
+
+
+3. Administer Local Password Policies:
+
+I. Set password policies:
+
+Syntax:
+	passwd –-maxdays days –-mindays days –-warndays days username
+
+Example:
+	
+	INPUT:
+	# passwd –-maxdays 30 –-mindays 5 –-warndays 7 csgs
+
 
