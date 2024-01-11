@@ -442,3 +442,99 @@ The following commands can be used for file management and organization in Linux
 	ii. tree: The ‘tree’ command lists the contents of directories in a tree-like format which helps us visualize the directory structures and helps us locate files. 
 	iii. 	cd: The ‘cd’ command helps us navigate to different directories. 
  	iv. ls: The ‘ls’ command helps us list the contents in a directory. 
+
+
+
+
+	• Create, View and edit text files
+◦ Create, view, edit text files with “vim” from command output or in an editor. 
+
+Vim also known as “Vi Improved” is a free and open source, text editor made by Bram Moolenaar for Unix based operating systems. It is upwards compatible to Vi. It can be used to create, view, modify and edit files in Linux.
+
+The vim text editor has two modes that we can operate in. They are:
+1. Insert Mode: In order to write to our files we need to get into the insert mode.  We can get into the insert mode in “Vim” by pressing ‘i’ after opening the vim text editor.
+2. Command Mode: In command mode we can execute all sorts of commands in vim to get various different actions done. In order to save a file or exit vim we need to get to the command mode first. From the insert mode we can get to the command mode by pressing “Esc” key on the keyboard.
+
+vim: The “vim” commands helps us invoke the vim text editor. Typing “vim” in the command line and pressing enter opens up the vim text editor for us. 
+
+1. Create:
+
+syntax:
+	vim filename.txt
+
+Example:
+
+	INPUT:
+	$ vim csgs.txt
+	
+	OUTPUT:
+	The vim text editor creates the file csgs.txt and opens it up in the vim editor for us to write to it or edit it.
+
+
+
+
+
+2. View: 
+
+syntax:
+	view filename.txt
+	vim -R filename.txt
+
+Eample:
+	
+	INPUT:
+	$ view csgs.txt
+	
+	OUTPUT:
+	This is a new file.
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                                                                                              
+	~                                                                                
+	"csgs.txt" [readonly] 1L, 20B                              1,19          All
+
+
+	INPUT:
+	$ vim -R csgs.txt
+	
+	OUTPUT:
+	THis is a new file.
+                                                                         
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                
+	~                                                                                                                                                              
+	"csgs.txt" 1L, 20B                                          1,19          All
+
+
+	The “view” command followed by the name of the file that we want to open, opens the file in the vim text editor in read-only mode and prevents us from writing into the file accidentally. The vim command with the -R flag works totally the same way as the view command.
+
+3. Edit:
+
+syntax: 
+	vim filename.txt
+
+Eample:
+
+	INPUT:
+	$ vim csgs.txt
+	
+	OUTPUT:
+	Passing any filename followed by the vim command opens the mentioned file in the vim text editor. If the mentioned file isn’t available, vim creates the file, and if the mentioned file is present already vim opens up the file in the text editor and enables us to edit it. In order for us to edit and write to it we need to get into the insert mode by pressing ‘i’ and after we are done with editing the file we can save and exit it by pressing ‘Ecs’ to get back to the command mode and press ‘q!’ if we want to exit without saving and ‘wq’ we we want to save and exit.
+
+
+
+
+	• Manage local Linux users and groups:
+◦ Manage local Linux users and groups, and administer local password policies.
+
