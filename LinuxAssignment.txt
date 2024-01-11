@@ -671,7 +671,6 @@ Example:
 File permission and ownership management commands like chmod, chown and chgrp doesn’t yield any output on successful execution however, we can use the ls -lh command to display the list of the content in details to verify whether these commands executed successfully or not. 
 
 1. Change File Permission:
-
 chmod: The “chmod” command helps us change the permission of files By writing permission values followed by the chmod command and the name of the file that we want to change the permission of. 
 
 Permission values:
@@ -693,7 +692,6 @@ Example:
 
 	
 2. Change File ownership (User):
-
 chown: The “chown” command helps us change file owner. 
 
 Syntax:
@@ -707,7 +705,6 @@ Example:
 
 
 3. Change File Ownership (Group):
-
 chgrp: The “chgrp” command helps us change the file group.
 
 Syntax:
@@ -719,3 +716,67 @@ Example:
 	$ chgrp csgs test.txt
 
 
+
+
+
+	• Archive and Copy files between systems:
+◦ Archive files and copy them from one system to another.
+
+1. Archive files:
+tar: The "tar" command helps us invoke the archiving utility called tar. This utility helps us in archiving and unarchiving packages.
+
+Syntax:
+	tar -czvf archive_name.tar.gz files_to_archive
+
+Flags:
+	-c: the '-c' flag creates a new archive.
+	-z: the '-z' flag compress the archive using gzip.
+	-v: the '-v' flag stands for verbose and it displays what is being done.
+	-f: the '-f' flag helps us specify the file name that we want to archive. 
+
+Example:
+
+	INPUT:
+	$ tar -czvf hello.tar.gz new/
+
+	OUTPUT:
+	new/
+	new/hello.c
+	new/hello.py
+	new/hello.js
+
+
+2. Unarchive Files:
+
+Syntax:
+	tar -xzvf archive_name.tar.gz -C Directory1/Directory2 
+
+Flags:
+	-x: The 'x' flag extract files from an archive. 
+	-C: flag lets us specify the directory to which files should be extracted.
+
+Example:
+
+	INPUT:
+	$ tar -xzvf hello.tar.gz Desktop/CSGS
+
+	OUTPUT:
+	new/
+	new/hello.c
+	new/hello.py
+	new/hello.js
+
+
+3. Copy from one system to another:
+
+In order to be able to copy files from one system to another, we need to have ssh connection set up between two systems. We can use the scp command for copying files over ssh. 
+
+scp: The "scp" command helps us copy files securely from one system to another over ssh. 
+
+Syntax:
+	scp archive_name.tar.gz username@destination_ip:/path_to_destination
+
+Example:
+
+	INPUT:
+	$ scp backup.tar.gz csgs@192.168.101.1:/home/csgs/
