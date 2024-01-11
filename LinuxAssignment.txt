@@ -647,19 +647,75 @@ Example:
 3. Administer Local Password Policies:
 
 I. Set password policies:
-
 Syntax:
 	passwd –x days –n days –w days username
 
 Flags:
 	passwd -x: sets the maximum password lifetime.
 	Passwd -n: sets the minimum password lifetime
-	passwd -w: sets the number of days in advance the user will begin receiving warning about password expiration. 
+	passwd -w: sets the number of days in which the user will begin receiving warning about password expiration. 
 
 
 Example:
 	
 	INPUT:
 	# passwd –x 30 –n 5 –w 7 csgs
+
+
+
+
+
+	• Control Access to files with Linux file system permissions:
+◦ Set Linux file system permissions on files and interpret the security effects of different permission settings. 
+
+File permission and ownership management commands like chmod, chown and chgrp doesn’t yield any output on successful execution however, we can use the ls -lh command to display the list of the content in details to verify whether these commands executed successfully or not. 
+
+1. Change File Permission:
+
+chmod: The “chmod” command helps us change the permission of files By writing permission values followed by the chmod command and the name of the file that we want to change the permission of. 
+
+Permission values:
+	I. Read = 4
+	II. Write = 2
+	iii. Execute = 1
+
+There are three set of ‘rwx’ letter sequence in the permission string. The first sequence stands for the permission of the owner, 2nd for the group and 3rd is for the world (others). There are three numbers in the permission value that we use with chmod, each number set the permission of each group, i.e. owner, group, others.
+
+
+Syntax:
+	chmod permissionvalue filename
+
+
+Example:
+	INPUT:
+	$ chmod 644 csgs.txt
+
+
+	
+2. Change File ownership (User):
+
+chown: The “chown” command helps us change file owner. 
+
+Syntax:
+	chown username filename
+
+Example:
+	
+	INPUT:
+	$ chown csgs test.txt
+
+
+
+3. Change File Ownership (Group):
+
+chgrp: The “chgrp” command helps us change the file group.
+
+Syntax:
+	chgrp groupname filename
+
+Example:
+	
+	INPUT:
+	$ chgrp csgs test.txt
 
 
