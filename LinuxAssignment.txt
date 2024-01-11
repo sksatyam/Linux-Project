@@ -649,11 +649,17 @@ Example:
 I. Set password policies:
 
 Syntax:
-	passwd –-maxdays days –-mindays days –-warndays days username
+	passwd –x days –n days –w days username
+
+Flags:
+	passwd -x: sets the maximum password lifetime.
+	Passwd -n: sets the minimum password lifetime
+	passwd -w: sets the number of days in advance the user will begin receiving warning about password expiration. 
+
 
 Example:
 	
 	INPUT:
-	# passwd –-maxdays 30 –-mindays 5 –-warndays 7 csgs
+	# passwd –x 30 –n 5 –w 7 csgs
 
 
