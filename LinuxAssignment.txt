@@ -15,7 +15,7 @@
 		Minimum: 2-3 GB 
 		Recommended: 4 GB
 
-	Disk Space:
+	Disk Space:s
 		Minimum: 10 GB of Free Space
 		Recommended: 20 GB or more Free Space
 
@@ -38,7 +38,7 @@
 	6. In this step, initially we get the Installation Summary screen we can configure the language, time zone and keyboard settings. 
 	7. Set up disk partitions, either manually we can opt for standard partitioning or ‘lvm’ setup or we can set up disk partition using the automatic partitioning option. 
 	8. Customize the software packages to be installed or proceed with the default package selection. 
-	9. Set password to the root account and set up a user account. 
+	9. Set passwsord to the root account and set up a user account. 
 	10 Confirm the installation settings in the Installation Summary screen and initiate the installation process. 
 	11. Upon completion, click on reboot option and log in to the newly install RHEL9 system. 
 
@@ -310,8 +310,8 @@ Example:
 14. cd: The 'cd' command stands for change directory and it simply stands for what it is, cd helps us change directory. However, simply typing cd without mentioning any paths afterwards takes us to the home directory of the current user. 
 
 Syntax:
-	cd : takes to the home directory of the current user.
-	cd Directory/Directory2 : Helps us navigate to directory2
+	cd 
+	cd Directory/Directory2
 
 Example:
 
@@ -341,15 +341,104 @@ Flags of 'rm' command:
 	rm -r: The -r flag remove directories and their contents recursively. 
 	rm -v: The -v flag stands for verbose and it explains what is being done.
 
-Examlpe:
+Example:
 
 	INPUT:
-	rm -v csgs.txt
+	$ rm -v csgs.txt
 
 	OUTPUT:
 	removed 'csgs.txt'
 
-	The 'rm' command doesn't output anything by default, however we cam use the -v flag to get output on execution of 'rm' command. 
+	The 'rm' command doesn't output anything by default, however we can use the -v flag to get output on execution of 'rm' command. 
 
 
 
+
+
+	• Manage files from the command line
+◦ Copy, Move, delete and organize files from the bash shell prompt. 
+
+ 
+1. Copy:
+cp: The ‘cp’ command helps us copy files and directories to our desired locations.
+
+Syntax:
+	cp -av filename.txt Destination_Directory/
+
+Flags:
+	cp -a: The-a flag helps copy the file/directory with the same permission settings and metadata as the original. It preserve as much as possible of the structure and attributes of the original files in the copy.
+	cp -v: The v flag explains what is being done. 
+
+
+Example: 
+
+	INPUT:
+	$ cp -av csgs.txt Desktop
+	
+	OUTPUT:
+	'csgs.txt' -> 'Desktop/csgs.txt'
+
+
+
+
+2. Move:
+mv: The ‘mv’ command helps us move files and directories from one directory to another or rename a file or directory. We can also use the mv command to convert hidden files to normal files and vice-versa
+
+Syntax:
+	mv -v filename.txt Destination/filename.txt
+	mv -v Directory/ DestinationDirectory/
+	mv -v filename.txt newfilename.txt
+	mv -v .hiddenfilename.txt filename.txt
+	
+Flags:
+	mv -v: The v flag explains what is being done.
+
+Example:
+
+	INPUT:
+	$ mv -v CSGS/ Desktop/
+
+	OUTPUT:
+	renamed 'CSGS/' -> 'Desktop/CSGS'
+
+	INPUT:
+	$ mv -v .csgs.txt csgs.txt
+
+	OUTPUT:
+	renamed '.csgs.txt' -> 'csgs.txt'
+	
+	The ‘mv’ command doesn’t output anything by default, however we can use the -v flag to get an output on the execution of mv command. 
+
+
+
+
+3. Delete:
+rm : The 'rm' command helps us remove files or directories. 
+
+Syntax:
+	rm filename.txt
+	rm -rf directoryname
+
+Flags of 'rm' command:
+	rm -f: The -f flag ignore nonexistent files and arguments and never prompts
+	rm -r: The -r flag remove directories and their contents recursively. 
+	rm -v: The -v flag stands for verbose and it explains what is being done.
+
+Example:
+
+	INPUT:
+	$ rm -v csgs.txt
+
+	OUTPUT:
+	removed 'csgs.txt'
+
+	The 'rm' command doesn't output anything by default, however we can use the -v flag to get output on execution of 'rm' command. 
+
+
+
+4. Organize Files:
+The following commands can be used for file management and organization in Linux:
+	i. cat: The ‘cat’ command can be used to view the contents of a file and also to create new files from the command line. 
+	ii. tree: The ‘tree’ command lists the contents of directories in a tree-like format which helps us visualize the directory structures and helps us locate files. 
+	iii. 	cd: The ‘cd’ command helps us navigate to different directories. 
+ 	iv. ls: The ‘ls’ command helps us list the contents in a directory. 
