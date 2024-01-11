@@ -780,3 +780,53 @@ Example:
 
 	INPUT:
 	$ scp backup.tar.gz csgs@192.168.101.1:/home/csgs/
+
+
+
+
+
+	• Add Disks, partitions and file systems to a Linux System:
+◦ Manage simple partitions and file systems.
+
+Several utilities can be used to add disks, partitions and file systems to a Linux System like: fdisk, parted, gparted, gdisk, etc.
+
+1. Adding a Disk:
+fdisk -l: Using the '-l' flag along with the fdisk command we can identify a newly added disk in any Linux Distribution, '-l' flag helps fdisk list all the storage devices connected to the computer system. 
+
+Example:
+	INPUT:
+	$ fdisl -l
+
+	OUTPUT:
+	Disk /dev/sda: 100 GiB, 107374182400 bytes, 209715200 sectors
+	Disk model: VBOX HARDDISK   
+	Units: sectors of 1 * 512 = 512 bytes
+	Sector size (logical/physical): 512 bytes / 512 bytes
+	I/O size (minimum/optimal): 512 bytes / 512 bytes
+	Disklabel type: dos
+	Disk identifier: 0xa9267382
+
+	Device     Boot   Start       End   Sectors Size Id Type
+	/dev/sda1  *       2048   2099199   2097152   1G 83 Linux
+	/dev/sda2       2099200 209715199 207616000  99G 8e Linux LVM
+
+2. Partitions and File Systems:
+
+mkfs: The 'mkfs' command lets us build a Linux file system.
+
+The following steps are to be followed to add a new partition:
+
+	1. fdisk /dev/sdX : select the disk that we want to create a partition in using the fdisk utility. Here X stands for the drive letter. 
+	The fdisk command line utility will open. 
+	
+	2. p : 'p' option displays the existing partitions.
+	3. n : 'n' option creates a new partition. 
+		i. p or e: 'p' will make the new partition primary and 'e' will make the new parition extended.
+		ii. select the starting and ending sectores or size.
+	4. t : 't' lets us set a partition type.
+	5. w : 'w' option writes the changes and quit. 
+	6. partprobe: informs the OS about the new changes.
+	7. mkfs -t ext4 /dev/sdXN : makes a file system of ext4 type on the selected partition of the selected drive. N denotes parition number and X denotes drive letter. 
+	8. mount /dev/sdXN /mnt/Partition_Name : Mount the new partition to the mount point. 
+	9. echo "/dev/sdXN /mnt/Partition_Name ext4 defaults 0 2" | sudo tee -a /etcfstab : Automactially mount on boot by adding an entry to '/etc/fstab'.
+
